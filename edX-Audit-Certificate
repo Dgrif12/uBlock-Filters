@@ -1,0 +1,10 @@
+! --edX Audits--
+! Bypass and hide annoying certificate promotions on edX free/audit courses.
+! Only tested on course W3Cx HTML5.0xHTML5 and CSS Fundamentals
+learning.edx.org##body:watch-attr(class):remove-attr(class)
+learning.edx.org##body:watch-attr(data-scroll-locked):remove-attr(data-scroll-locked)
+learning.edx.org##div[id="root"]:watch-attr(data-focus-on-hidden):remove-attr(data-focus-on-hidden)
+learning.edx.org##div[id="root"]:watch-attr(aria-hidden):remove-attr(aria-hidden)
+learning.edx.org##section[id="course-sidebar"]
+learning.edx.org##^script:has-text('useLockAttribute')
+learning.edx.org##.pgn__modal-layer
