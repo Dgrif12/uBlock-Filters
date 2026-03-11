@@ -1,0 +1,28 @@
+! --Hulu Series--
+! Avoid spoilers for current and future episodes.
+
+! --Hulu Episode Thumbnails--
+! CSS Path Filter for Hulu Images
+www.hulu.com##:matches-path(/series) ._1fbaspuq._10ka3nq0._1fbaspu16._1fbaspu1i._1fbaspu10._1fbaspuz._1fbaspu1f._1fbaspu1n._1ozf51sa
+! CSS Selector Filter for Hulu Images. 
+! www.hulu.com##:matches-path(/series) div.AllUpGrid__generic-tile > div > figure > div > button > div > div > picture
+
+! --Hulu Episode Descriptions--
+! CSS Path Filter for Hulu episode descriptions
+www.hulu.com##:matches-path(/series) ._1fbaspu18._1fbaspu16._1fbaspu1a._1fbaspu1q._6bueqf13
+! CSS Selector Filter for Hulu episode descriptions
+! www.hulu.com##:matches-path(/series) div.AllUpGrid__generic-tile > div > figure > div > figcaption > div > div
+! CSS Filter for Hulu Series current/next episode description shown on Series page
+! Also contained in .Masthead__description (parent) and .TruncatedTextWithMore_text (child), so picking either of these works too.
+www.hulu.com##:matches-path(/series) .TruncatedTextWithMore
+
+! --Hulu Player Descriptions--
+! Optionally disable episode desctiptions in the Hulu player.
+! www.hulu.com##:matches-path(/watch) .FliptrayWrapper > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1)
+! www.hulu.com##:matches-path(/watch) .PlayerMetadata__description
+
+! --Hulu Home Page Cards--
+! Optionally hide descriptions for Hulu cards on the home page. Pretty sure it does it for all types of content, so may not be desired. Plus, you can avoid seeing the descriptions by not hovering.
+! www.hulu.com##.torlpwn
+! For some reason, this is the specific CSS Path. Not really necessary, but here in case the above Selector is too greedy.
+! www.hulu.com##.torlpwn.bu00pe8._1fbaspu1q._1fbaspu1a._1fbaspu16._1fbaspu2w.torlpw0._1fbaspu2v
